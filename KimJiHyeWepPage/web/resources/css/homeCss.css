@@ -1,0 +1,72 @@
+/*학과 : 컴퓨터 공학과 
+학번 : 2014210057 
+이름 : 김지혜
+파일 이름 : homeCss.css
+파일 설명 : index.html 페이지에 적용되는 css코드를 작성 한 css파일
+코드 라인 수 : 72*/
+.sub_section{
+    margin:0;
+    padding:24px;
+    text-align: center;
+}
+.profile_text > p,.profile_text >div{
+    margin-top:24px;
+}	
+.sub_contents_box > div{
+    padding-top:20px;
+    padding-bottom:20px;
+}		
+.check_time_box{
+    margin-top:10px;
+}
+
+.clock_button{
+    background-color: white;
+    border:none;
+}
+iframe{
+    border:rgb(43, 44, 43) solid 3px;
+}
+.btn {
+    background-color: rgb(43, 44, 43);
+    border:  none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.dongguk:hover{
+    
+    font-weight: bold;
+}
+.dongguk:hover a{
+    color:orange;
+   font-weight:bold;
+}
+.btn:hover{
+    background-color:white;
+    border:3px solid rgb(43, 44, 43);
+    color:rgb(43, 44, 43);
+    font-weight:bold;
+}
+@media (max-width: 1024px) {
+    .sub_section {
+      float:none;
+      width:100%;
+      padding:0px;
+    }
+}
+@media (max-width: 360px) {
+    #profile_img{
+        width:296px;
+        height:440px;
+    }
+    iframe{
+        width:296px;
+    }
+    #date_time{
+        display:block;
+    }
+}

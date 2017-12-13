@@ -1,0 +1,14 @@
+/*학과 : 컴퓨터 공학과 
+학번 : 2014210057 
+이름 : 김지혜
+파일 이름 : courseCss.css
+파일 설명 : course.html 페이지에 적용되는 css코드를 작성 한 css파일
+코드 라인 수 : 14*/
+li,ul{ 
+    list-style:lower-roman;
+}
+.grade{
+    font-weight: bold;
+    color:orange;
+    list-style:none;  
+}

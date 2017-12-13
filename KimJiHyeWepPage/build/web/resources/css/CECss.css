@@ -1,0 +1,15 @@
+/*학과 : 컴퓨터 공학과 
+학번 : 2014210057 
+이름 : 김지혜
+파일 이름 : CECss.css
+파일 설명 : CECss.css 페이지에 적용되는 css코드를 작성 한 css파일
+코드 라인 수 : 15*/
+div{
+    margin-top:16px;
+    margin-bottom:16px;
+    text-align: center;
+    color: rgb(43, 44, 43);
+}
+.highlight{
+    font-weight:bold;
+}

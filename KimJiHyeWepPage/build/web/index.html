@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--학과 : 컴퓨터 공학과 
+학번 : 2014210057 
+이름 : 김지혜
+파일 이름 : index.html
+파일 설명 : 자신에 대한 간략한 설명을 표현하기 위한 페이지
+코드 라인 수 : 92-->
+<html>
+    <head>
+        <title>KimJiHye</title>
+        <meta charset="UTF-8">      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./resources/css/generalCss.css"/>
+        <link rel="stylesheet" type="text/css" href="./resources/css/homeCss.css"/>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div class="title"><a href="./index.html">Kim Ji Hye</a></div>
+                <div class="side_menu_bar" id="side_nav_bar">
+                    <a class="closebtn" onclick="closeNav()">&times;</a>      
+                    <a class="nav_menu_btn" href="./index.html">home</a>
+                    <a class="nav_menu_btn" href="./skills.html">skills</a>
+                    <a class="nav_menu_btn" href="./project.html">project</a>
+                </div>
+                <div class="right menu_icon"><a onclick="openNav()" class="fa fa-bars"></a></div>
+                <div class="menu right bold" id="project"><a href="./project.html">project</a></div>
+                <div class="menu right bold" id="skills"><a href="./skills.html">skills</a></div>
+                <div class="menu right bold on" id="home"><a href="./index.html">home</a></div>
+            </header>
+            <section class="container">
+                <div class="main_contents">
+                    <div class="three left sub_section">
+                        <img id="profile_img" width="320" height="520" src="resources/images/jjye.jpg">
+                        <div class="profile_text">
+                            <p>김지혜</p>
+                            <p>1996.2.26</p>
+                            <p>경기도 안산시 단원구</p>
+                            <div class="item">
+                                <i class="fa fa-envelope"></i>
+                                <a href="mailto:rlawo4975@hanmail.net">rlawo4975@hanmail.net</a>
+                            </div>
+                            <div class="item">
+                                <i class="fa fa-github"></i>
+                                <a class="header">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="six left sub_section">
+                        <p class="sub_title">Home</p>
+                        <div class="sub_contents_box">
+                            <div class="dongguk"><a href="https://ce.dongguk.ac.kr/wiz/user/wwwcs/" target="_blank">동국대학교 경주캠퍼스 컴퓨터 공학과</a><span>(<i class="fa fa-caret-square-o-left"></i> 클릭시 홈페이지로 이동)</span></div>
+                            <div class="dongguk">DB & WE LAB (지도교수 : <a href="http://wwwcs.dongguk.ac.kr/~byunjy">변정용 교수님</a>)</div>
+                            <div><a class="btn" href="./resources/text/course.html"  target="course" onclick="toggle_tag1(this)">전공 이수 과목</a></div>
+                            <div class="hidden" id="iframe_box1"><iframe width="400" height="400"  name="course" ></iframe></div> 
+                            <div><a class="btn" href="./resources/text/CE.html"  target="C.E" onclick="toggle_tag2(this)">컴공인 나의 다짐</a></div>                            
+                            <div id="iframe_box2" class="hidden"><iframe width="400" height="400"  name="C.E"></iframe></div>
+                            <div class="check_time_box">
+                                <span>현재시각 확인하기 -></span><button class="clock_button" id="clock_button" onclick="check_date_time()" type="button"><img width="50" height="50" class="btn-img" src="resources/images/clockimg.png"></button><span id="date_time"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>	
+            </section>
+            <footer>
+                <div class="footer">
+                    <p>Dongguk University</p>
+                    <p>Computer Engineering</p>
+                </div>
+            </footer>   
+        </div>
+        <script>
+            function toggle_tag1(Object) {
+                document.getElementById("iframe_box1").classList.toggle("hidden");
+            }
+            function toggle_tag2(Object) {
+                document.getElementById("iframe_box2").classList.toggle("hidden");
+            }
+            function check_date_time() {
+                var now = new Date();
+                document.getElementById("date_time").innerHTML = '현재시간은<b>' + now.toUTCString() + '</b>입니다.';
+            }
+            function closeNav() {
+                document.getElementById("side_nav_bar").style.width = "0";
+            }
+            function openNav() {
+                document.getElementById("side_nav_bar").style.width = "230px";
+            }
+        </script>
+    </body>
+</html>

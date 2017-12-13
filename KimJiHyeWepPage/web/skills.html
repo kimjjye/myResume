@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--학과 : 컴퓨터 공학과 
+학번 : 2014210057 
+이름 : 김지혜
+파일 이름 : skills.html
+파일 설명 : 개발 경험 있는 언어들과 툴을 나타내기 위한 페이지
+코드 라인 수 : 80-->
+<html>
+    <head>
+        <title>KimJiHye</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./resources/css/generalCss.css"/>
+        <link rel="stylesheet" type="text/css" href="./resources/css/skillsCss.css"/>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div class="title"><a href="./index.html">Kim Ji Hye</a></div>
+                <div class="side_menu_bar" id="side_nav_bar">
+                    <a class="closebtn" onclick="closeNav()">&times;</a>      
+                    <a class="nav_menu_btn" href="./index.html">home</a>
+                    <a class="nav_menu_btn" href="./skills.html">skills</a>
+                    <a class="nav_menu_btn" href="./project.html">project</a>
+                </div>
+                <div class="right menu_icon"><a onclick="openNav()" class="fa fa-bars"></a></div>
+                <div class="menu right bold" id="project"><a href="./project.html">project</a></div>
+                <div class="menu right bold on" id="skills"><a href="./skills.html">skills</a></div>
+                <div class="menu right bold" id="home"><a href="./index.html">home</a></div>
+            </header>
+            <section class="container">
+                <div class="main_contents">
+                    <p class="sub_title">Skills</p>			
+                    <div class="img_box left">
+                        <img class="image_item" src="resources/images/Cimage.jpg">
+                        <div class="image_item_text_box">
+                            <div class="image_text_item bold"><a href="https://www.visualstudio.com/ko/downloads/" target="_blank">Visual Studio</a></div>
+                        </div>
+                    </div>
+                    <div class="img_box left">
+                        <img class="image_item" src="resources/images/javaimage.png">
+                        <div class="image_item_text_box">
+                            <div class="image_text_item bold"><a href="http://www.eclipse.org/" target="_blank">Eclips</a></div>
+                            <div class="image_text_item bold"><a href="https://netbeans.org/" target="_blank">Netbeans</a></div>
+                        </div>
+                    </div>
+                    <div class="img_box left">
+                        <img class="image_item" src="resources/images/data.jpg">
+                        <div class="image_item_text_box">
+                            <div class="image_text_item bold"><a href="https://www.oracle.com/index.html" target="_blank">Sql Developer(Oracle)</a></div>
+                            <div class="image_text_item bold"><a href="https://dev.mysql.com/downloads/mysql/" target="_blank">MySQL(MySQL)</a></div>
+                        </div>
+                    </div>
+                    <div class="img_box left">
+                        <img class="image_item" src="resources/images/html_css_js_img.png">
+                        <div class="image_item_text_box">
+                            <div class="image_text_item bold"><a href="https://www.w3schools.com/" target="_blank">w3school</a></div>
+                        </div>
+                    </div>
+                </div>	
+            </section>
+            <footer>
+                <div class="footer">
+                    <p>Dongguk University</p>
+                    <p>Computer Engineering</p>
+                </div>
+            </footer>   
+        </div>		
+        <script>
+            function closeNav() {
+                document.getElementById("side_nav_bar").style.width = "0";
+            }
+
+            function openNav() {
+                document.getElementById("side_nav_bar").style.width = "250px";
+            }
+        </script>        
+    </body>
+</html>

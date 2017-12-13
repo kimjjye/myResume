@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--학과 : 컴퓨터 공학과 
+학번 : 2014210057 
+이름 : 김지혜
+파일 이름 : project.html
+파일 설명 : 완료, 혹은 진행중인 프로젝트에 관한 내용을 표현 할 페이지
+코드 라인 수 : 95-->
+<html>
+    <head>
+        <title>KimJiHye</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./resources/css/generalCss.css"/>
+        <link rel="stylesheet" type="text/css" href="./resources/css/projectCss.css"/>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div class="title"><a href="./index.html">Kim Ji Hye</a></div>
+                <div class="side_menu_bar" id="side_nav_bar">
+                    <a class="closebtn" onclick="closeNav()">&times;</a>      
+                    <a class="nav_menu_btn" href="./index.html">home</a>
+                    <a class="nav_menu_btn" href="./skills.html">skills</a>
+                    <a class="nav_menu_btn" href="./project.html">project</a>
+                </div> 
+                <div class="right menu_icon"><a onclick="openNav()" class="fa fa-bars"></a></div>
+                <div class="menu right bold on" id="project"><a href="./project.html">project</a></div>
+                <div class="menu right bold" id="skills"><a href="./skills.html">skills</a></div>
+                <div class="menu right bold" id="home"><a href="./index.html">home</a></div>
+            </header>
+            <section class="container">
+                <div class="main_contents">
+                    <p class="sub_title">Project</p>			
+                    <div class="project_box left">
+                        <div class="project_image_box"><img class="project_image_item" src="resources/images/library.jpg"></div>
+                        <div class="project_summary_box">
+                            <div class="project_title"><a style="cursor:pointer" onclick="openProBox(this)">Library Management Program</a></div>
+                            <div class="project_period hidden">2017.xx.xx-2018.xx.xx</div>
+                            <div class="project_detail hidden">도서관 관리를 위한 도서관 관리 프로그램입니다. java언어 기반 프로그램이며 Oracle DBMS를 사용하였으며 추후 html, css, js, jsp 등을 사용해 웹페이지화 할 예정입니다.</div>  
+                        </div>
+                    </div>
+                    <div class="project_box left">
+                        <div class="project_image_box"><img class="project_image_item" src="resources/images/image1.png"></div>
+                        <div class="project_summary_box">
+                            <div class="project_title"><a style="cursor:pointer" onclick="openProBox(this)">프로젝트 타이틀</a></div>
+                            <div class="project_period hidden">20xx.xx.xx-20xx.xx.xx</div>
+                            <div class="project_detail hidden">프로젝트내용</div>  
+                        </div>
+                    </div>
+                    <div class="project_box left">
+                        <div class="project_image_box"><img class="project_image_item" src="resources/images/image1.png"></div>
+                        <div class="project_summary_box">
+                            <div class="project_title"><a style="cursor:pointer" onclick="openProBox(this)">프로젝트 타이틀</a></div>
+                            <div class="project_period hidden">20xx.xx.xx-20xx.xx.xx</div>
+                            <div class="project_detail hidden">프로젝트 내용</div>  
+                        </div>
+                    </div> 
+                    <div class="project_box left">
+                        <div class="project_image_box"><img class="project_image_item" src="resources/images/image1.png"></div>
+                        <div class="project_summary_box">
+                            <div class="project_title"><a style="cursor:pointer" onclick="openProBox(this)">프로젝트 타이틀</a></div>
+                            <div class="project_period hidden">20xx.xx.xx-20xx.xx.xx</div>
+                            <div class="project_detail hidden">프로젝트 내용</div>  
+                        </div>
+                    </div>    
+                </div>	
+            </section>
+            <footer>
+                <div class="footer">
+                    <p>Dongguk University</p>
+                    <p>Computer Engineering</p>
+                </div>
+            </footer>   
+        </div>	
+        <script>
+            function closeNav() {
+                document.getElementById("side_nav_bar").style.width = "0";
+            }
+
+            function openNav() {
+                document.getElementById("side_nav_bar").style.width = "250px";
+            }
+            function openProBox(Object) {
+                var title = Object.parentNode;
+                var parent = title.parentNode.parentNode;
+                var period = title.nextElementSibling;
+                var detail = title.nextElementSibling.nextElementSibling;
+                parent.classList.toggle("project_full_box");
+                period.classList.toggle("hidden");
+                detail.classList.toggle("hidden");
+            }
+        </script>	
+    </body>
+</html>

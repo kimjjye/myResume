@@ -1,0 +1,59 @@
+/*학과 : 컴퓨터 공학과 
+학번 : 2014210057 
+이름 : 김지혜
+파일 이름 : skillsCss.css
+파일 설명 : skills.html 페이지에 적용되는 css코드를 작성 한 css파일
+코드 라인 수 : 59*/
+.img_box{
+    width:20%;
+    height:440px;
+    text-align:center;
+    margin:24px;
+    padding-top:24px;
+    border:gray solid 2px;
+    border-radius: 10px;   
+    box-shadow: 3px 3px 10px grey;
+    transition:1s;
+}
+.img_box:hover{
+    width:22%;
+    height:496px;
+}
+.image_item{
+    width:80%;
+    height:60%;
+    border-radius: 5px;
+}
+.image_item_text_box{
+    margin-top:20px;
+}
+.image_text_item{
+    padding:20px;
+}
+.image_text_item:hover{
+    background-color: lightgray;
+}
+@media (max-width: 1024px) {
+    .img_box{
+        width:44%;
+    }
+    .img_box:hover{
+        width:44%;
+        box-shadow:none;
+        height:440px;
+        background-color:rgb(46, 46, 46);        
+    }
+    .img_box:hover .image_text_item a{
+        color:gray;
+    }
+}
+@media (max-width: 360px) {
+    .img_box{
+        width:320px;
+        margin-left:0;
+        margin-right:0;
+    }
+    .img_box:hover{
+        width:320px;
+    }
+}
